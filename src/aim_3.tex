@@ -72,24 +72,17 @@ online optimizers described above. Once that migration lands, the Blop package
 itself will be archived; the architecture built over the past year carries forward
 unchanged.
 
-\subsubsection{Blop development}
+\subsubsection{Blop v1.0 Release}
 
-Blop, or Bluesky Optimization Package \cite{Morris2024} is an autonomous agent 
-framework designed to steer experimental data acquisition by bridging advanced
-optimization algorithms with the Bluesky ecosystem. Built upon the adaptive 
-experimentation platform Ax platform \cite{olson2025ax}, Blop provides a 
-streamlined interface that simplifies how experimental data is collected, analyzed, 
-and formulated as an optimization problem. 
-
-With the release of version 1.0 in July 2026 on conda-forge and PyPI, Blop introduced 
-significant architectural and functional enhancements. Key updates include revamped 
-documentation featuring active deployments, tutorials, and comprehensive how-to guides. 
-Core functionality has been expanded to incorporate first-class integrations with 
-Bluesky Queueserver, Xopt, and SciPy. Additionally, simulation capabilities now feature 
-a “bring your own beamline” workflow utilizing XRT to accurately model physical beamline 
-movements. Advanced optimization features further enhance experimental flexibility, 
-introducing scalarized objectives, manual data point insertion and data priming, best 
-point navigation, and robust checkpointing. 
+The July 2026 version 1.0 release has improved Blop's usability and accessibility 
+for both users and developers. Through improved documentation, which includes detailed 
+hands-on tutorials, active deployment references, and comprehensive how-to guides, Blop 
+has become easier to adapt into new and existing workflows.
+Functionality has also improved through the inclusion of scalarized multi-objective optimization 
+support, manual data point injection and data priming, best-point navigation, and configurable 
+stopping criteria, providing operators finer control over trial execution. Finally, 
+simulation capabilities were expanded with a bring your own beamline workflow ideology 
+using XRT, allowing for testing before actual beamtime is used.
 
 \subsubsection{Blop-sim and XRT}
 
