@@ -113,15 +113,26 @@ rapid, and reconfigurable offline deployment testing. We target swapout at the e
 layer as it is a convenient flat low-level interface to mock a beamline through, with opaque 
 self contained scalars providing an interface for arbitrary simulation complexity.
 
-\subsubsection{Lessons from beamline deployments}
-At CHX, Blop has been successfully applied to optimization tasks involving Bragg peaks and 
-detector positioning. At XPD, ongoing work demonstrates its potential in autonomous experimental 
-workflows. 
+\subsubsection{Blop deployments}
+Blop has been deployed across multiple NSLS-II beamlines for a diverse set of optimization tasks.
+These deployments were generally successful, but they also exposed the practical challenges that
+frequently accompany machine-learning-driven control, including hyperparameter selection,
+appropriate variable bounds, and robust evaluation metrics. They also highlighted issues that are
+more specific to large user facilities, where beamtime is scarce and the cost of a failed or poorly
+tuned online optimization is high.
 
-An earlier effort at BMM was less successful, highlighting the challenges of moving from an 
-optimization concept to a working beamline deployment. Experiences like this reinforce the 
-importance of realistic simulations, carefully defined evaluation functions, and appropriate 
-parameter bounds before committing valuable beamtime. 
+At CHX, Blop has been used to optimize Bragg-peak finding with an imperfect Diamond, using the
+FWHM and peak intensity of rocking curves to identify an optimal surface position. In that
+setting, Blop improved acquisition efficiency by approximately 90\% relative to a brute-force
+grid-scan strategy. At XPD, ongoing work demonstrates the broader potential of the framework for
+autonomous experimental workflows, including integration with the Bluesky Queue Server. Taken
+together, these examples show that the method is not limited to a single optimization problem but
+can adapt to different beamline workflows and measurement constraints.
 
-Together, these deployments demonstrate both Blop's capabilities and the practical considerations 
-needed for reliable optimization. 
+An earlier deployment at BMM was less successful and illustrates the gap between an optimization
+concept and a robust beamline operation. Such experiences reinforce the importance of realistic
+simulations, carefully defined objective functions, and physically meaningful parameter bounds
+before committing valuable beamtime.
+
+Taken together, these deployments demonstrate both the capabilities of Blop and the practical
+considerations required to deploy optimization reliably in real experimental environments. 
